@@ -1,0 +1,27 @@
+:root{
+    --darkblue: #001957;
+    --yellow: #F9AE00;  
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+.sidebar{
+    background: var(--darkblue);
+    color: white;
+    width: 300px;
+    height: 100vh;
+}
+
+.add-task{
+    background: var(--yellow) !important;
+    color: var(--darkblue) !important;
+    font-weight: bold;
+}
