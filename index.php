@@ -1,3 +1,11 @@
+<?php
+include('assets/php/connect.php');
+include('assets/php/classes.php');
+$task = new Task(null);
+$taskList = $task->getAllTasks();
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -13,7 +21,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
     rel="stylesheet">
-  <link rel="icon" href="img/mytodolist-logo.png" type="image/x-icon">
+  <link rel="icon" href="assets/img/mytodolist-logo.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css">
   </head>
 
@@ -23,7 +31,7 @@
         <div class="col-2 p-0">
           <!-- SIDEBAR -->
           <div class="sidebar">
-            <div class="logo text-center py-3"><img src="img/mytodolist-logo.svg" alt="My-To-Do-List Logo" class="img-fluid"></div>
+            <div class="logo text-center py-3"><img src="assets/img/mytodolist-logo.svg" alt="My-To-Do-List Logo" class="img-fluid"></div>
             <div class="navigations">
               <ul>
                 <li>
