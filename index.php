@@ -18,55 +18,60 @@
   </head>
 
   <body>
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-      <div class="logo"></div>
-      <div class="navigations">
-        <ul>
-          <li>
-            <div class="my-tasks"><i class="fa-solid fa-house"></i>My Tasks</div>
-          </li>
-          <li>
-            <div class="important"><i class="fa-regular fa-star"></i>Important</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- TASKS CONTAINER -->
-    <div class="main-content">
-      <div class="top">
-        <h1>My Tasks</h1>
-        <button class="btn btn-primary add-task"><i class="fa-solid fa-plus"></i> Add a task</button>
-      </div>
-      <div class="task-container">
-        <ul class="task-list">
-          <li class="task-item">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-                Wash the dishes
-              </label>
-            </div>
-            <div class="action-buttons">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 p-0">
+          <!-- SIDEBAR -->
+          <div class="sidebar">
+            <div class="logo text-center py-3"><img src="img/mytodolist-logo.svg" alt="My-To-Do-List Logo" class="img-fluid"></div>
+            <div class="navigations">
               <ul>
                 <li>
-                  <div class="prioritize"><i class="fa-regular fa-star"></i></div>
+                  <div class="my-tasks"><i class="fa-solid fa-house"></i>My Tasks</div>
                 </li>
                 <li>
-                  <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
-                </li>
-                <li>
-                  <div class="delete"><i class="fa-solid fa-trash"></i></div>
+                  <div class="important"><i class="fa-regular fa-star"></i>Important</div>
                 </li>
               </ul>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+
+        <div class="col-10 p-0">
+          <!-- TASKS CONTAINER -->
+          <div class="main-content">
+            <div class="top">
+              <h1>My Tasks</h1>
+              <button class="btn btn-primary add-task"><i class="fa-solid fa-plus"></i> Add a task</button>
+            </div>
+            <div class="task-container">
+              <ul class="task-list">
+                <li class="task-item">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Wash the dishes
+                    </label>
+                  </div>
+                  <div class="action-buttons">
+                    <ul>
+                      <li>
+                        <div class="prioritize"><i class="fa-regular fa-star"></i></div>
+                      </li>
+                      <li>
+                        <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
+                      </li>
+                      <li>
+                        <div class="delete"><i class="fa-solid fa-trash"></i></div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="container-fluid">
-      <h1 class="display-1">HELLO, WORLD!</h1>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
