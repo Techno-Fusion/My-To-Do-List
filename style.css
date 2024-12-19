@@ -1,11 +1,10 @@
 :root{
     --darkblue: #001957;
-    --yellow: #F9AE00;  
+    --yellow: #F9AE00s;
+    --bgGradient: linear-gradient(175deg, #24CAEA 0.27%, #000395 88.31%);  
 }
 
 body{
-    display: flex;
-    flex-direction: column;
     font-family: "Poppins", sans-serif;
 }
 
@@ -14,9 +13,9 @@ li{
 }
 
 .sidebar{
-    background: var(--darkblue);
+    background: var(--bgGradient);
     color: white;
-    width: 300px;
+    width: 100%;
     height: 100vh;
 }
 
