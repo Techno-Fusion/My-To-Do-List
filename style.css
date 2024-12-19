@@ -10,6 +10,8 @@ body{
 
 li{
     list-style-type: none;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .sidebar{
@@ -19,8 +21,89 @@ li{
     height: 100vh;
 }
 
+.sidebar a{
+    color: white !important;
+    text-decoration: none;
+}
+
 .add-task{
     background: var(--yellow) !important;
     color: var(--darkblue) !important;
     font-weight: bold;
+}
+
+.add-task:hover{
+    color: var(--yellow) !important;
+    background: var(--darkblue) !important;
+}
+
+.task-item:hover{
+    background-color: lightgray;
+}
+
+.btn-action{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+@media (max-width: 768px){
+    .sidebar{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-list{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 0px;
+        height: 100%;
+    }
+
+    .logo{
+        max-height: 100%;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        margin-block: 20px !important;
+        margin-left: 25px;
+    }
+
+    .logo img{
+        max-width: 60px;
+    }
+
+    li{
+        font-size: 1rem;
+        margin-right: 20px;
+    }
+
+}
+
+@media (max-width: 416px){
+    .nav-list{
+        padding-inline: 10px !important;
+    }
+
+    .task-list{
+        padding-inline: 20px !important;
+    }
+
+    .card{
+        margin: 0px;
+        flex-direction: column !important;
+    }
+
+    .btn-action{
+        font-size: 1rem;
+    }
+
+    .action-list, .form-check{
+        padding-left: 0px !important;
+    }
+
+    .form-check{
+        align-items: normal;
+    }
 }

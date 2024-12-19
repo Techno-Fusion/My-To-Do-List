@@ -28,54 +28,57 @@ $taskList = $task->getAllTasks();
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-2 p-0">
+        <div class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
           <!-- SIDEBAR -->
           <div class="sidebar">
-            <div class="logo text-center py-3"><img src="assets/img/mytodolist-logo.svg" alt="My-To-Do-List Logo" class="img-fluid"></div>
+            <div class="logo text-center py-3 mb-3"><img src="assets/img/mytodolist-logo.svg" alt="My-To-Do-List Logo"
+                class="img-fluid"></div>
             <div class="navigations">
-              <ul>
+              <ul class="nav-list px-5 text-start">
                 <li>
-                  <div class="my-tasks"><i class="fa-solid fa-house"></i>My Tasks</div>
+                  <a href="index.php" class="my-tasks"><i class="fa-solid fa-house"></i> My Tasks</a>
                 </li>
                 <li>
-                  <div class="important"><i class="fa-regular fa-star"></i>Important</div>
+                  <a href="index.php" class="important"><i class="fa-regular fa-star"></i> Important</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div class="col-10 p-0">
+        <div class="col-12 col-md-8 col-lg-9 col-xl-10 p-0">
           <!-- TASKS CONTAINER -->
-          <div class="main-content">
-            <div class="top">
-              <h1>My Tasks</h1>
-              <button class="btn btn-primary add-task"><i class="fa-solid fa-plus"></i> Add a task</button>
+          <div class="main-content container-fluid">
+            <div class="top d-flex justify-content-between align-items-center">
+              <h1 class="p-5">My Tasks</h1>
+              <div class="justify-content-end p-5"><button class="btn add-task"><i class="fa-solid fa-plus"></i> Add a task</button></div>
             </div>
-            <div class="task-container">
-              <ul class="task-list">
-                <li class="task-item">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                      Wash the dishes
-                    </label>
-                  </div>
-                  <div class="action-buttons">
-                    <ul>
-                      <li>
-                        <div class="prioritize"><i class="fa-regular fa-star"></i></div>
-                      </li>
-                      <li>
-                        <div class="edit"><i class="fa-solid fa-pen-to-square"></i></div>
-                      </li>
-                      <li>
-                        <div class="delete"><i class="fa-solid fa-trash"></i></div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
+            <div class="row">
+              <div class="task-container">
+                <ul class="task-list px-5">
+                  <li class="task-item card d-flex justify-content-between align-items-center flex-row">
+                    <div class="form-check ps-5">
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <label class="form-check-label" for="flexCheckDefault">
+                        Wash the dishes
+                      </label>
+                    </div>
+                    <div class="action-buttons justify-content-end">
+                      <ul class="action-list d-flex flex-wrap">
+                        <li class="m-3">
+                          <button class="btn-action"><i class="fa-regular fa-star"></i></button>
+                        </li>
+                        <li class="m-3">
+                          <button class="btn-action"><i class="fa-solid fa-pen-to-square"></i></button>
+                        </li>
+                        <li class="m-3">
+                          <button class="btn-action"><i class="fa-solid fa-trash"></i></button>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
