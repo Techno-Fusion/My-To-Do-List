@@ -52,8 +52,8 @@ $taskList = $task->getAllTasks();
             <div class="top d-flex justify-content-between align-items-center">
               <h1 class="p-5">My Tasks</h1>
               <div class="justify-content-end p-5">
-                <button  type="button" class="btn add-task" data-bs-toggle="modal"
-                data-bs-target="#addNewTaskModal"><i class="fa-solid fa-plus"></i> Add a task</button>
+                <button type="button" class="btn add-task" data-bs-toggle="modal" data-bs-target="#addNewTaskModal"><i
+                    class="fa-solid fa-plus"></i> Add a task</button>
 
                 <!-- ADD NEW TASK MODAL -->
                 <div class="modal fade" id="addNewTaskModal" tabindex="-1" aria-labelledby="addNewTaskModelLabel"
@@ -82,76 +82,9 @@ $taskList = $task->getAllTasks();
             <div class="row">
               <div class="task-container">
                 <ul class="task-list px-5">
-                  <li class="task-item card d-flex justify-content-between align-items-center flex-row">
-                    <div class="form-check ps-5">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label class="form-check-label" for="flexCheckDefault">
-                        Wash the dishes
-                      </label>
-                    </div>
-                    <div class="action-buttons justify-content-end">
-                      <ul class="action-list d-flex flex-wrap">
-                        <li class="m-3">
-                          <button class="btn-action"><i class="fa-regular fa-star"></i></button>
-                        </li>
-                        <li class="m-3">
-                          <button type="button" class="btn-action" data-bs-toggle="modal"
-                            data-bs-target="#editTaskModal"><i class="fa-solid fa-pen-to-square"></i></button>
-
-                          <!-- EDIT TASK MODAL -->
-                          <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModelLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="editTaskModelLabel">EDIT YOUR TASK</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  <form>
-                                    <label for="task">Your Task</label>
-                                    <input type="text" class="form-control" id="task" name="task">
-                                  </form>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="m-3">
-                          <button type="button" class="btn-action" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop"><i class="fa-solid fa-trash"></i></button>
-
-                          <!-- DELETE MODAL -->
-                          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                              <div class="modal-content">
-                                <div class="modal-header">
-                                  <h1 class="modal-title fs-5" id="staticBackdropLabel">DELETE TASK</h1>
-                                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                  <h4>Do you want to delete this task?</h4>
-                                  <h6>If you click the delete button, it will be permanently removed from the list.</h6>
-                                </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-danger">Delete</button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
+                  <?php foreach ($taskList as $taskItem) {
+                    echo $taskItem->buildCard();
+                  } ?>
                 </ul>
               </div>
             </div>
