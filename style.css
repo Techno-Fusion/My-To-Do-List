@@ -47,6 +47,16 @@ li{
     border: none;
 }
 
+.modal-header{
+    background-color: var(--yellow) !important;
+    color: var(--darkblue);
+}
+
+/* .modal-footer{
+    background-color: var(--darkblue) !important;
+    color: white !important;
+} */
+
 @media (max-width: 768px){
     .sidebar{
         height: 100px;
