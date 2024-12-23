@@ -4,6 +4,8 @@ include('assets/php/classes.php');
 $task = new Task(null);
 $taskList = $task->getAllTasks();
 
+echo "Helloooooo";
+
 ?>
 
 <!doctype html>
