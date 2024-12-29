@@ -4,6 +4,7 @@ include('assets/php/classes.php');
 $task = new Task(null);
 $taskList = $task->getAllTasks();
 
+echo "test mic";
 echo "epal si louie";
 echo "Helloooooo";
 echo "hello world";
